@@ -13,4 +13,10 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:background">@drawable/splashscreen</item>
     </style>
+
+    <style parent="Theme.AppCompat.Dialog" name="AppTheme.Dark.Dialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/iron</item>
+        <item name="android:background">@drawable/bgload</item>
+    </style>
 </resources>

@@ -13,6 +13,8 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
+
+
             android:label="@string/title_activity_main"></activity>
         <activity
             android:name=".Splash"
@@ -23,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RecipeView"></activity>
     </application>
 
 </manifest>
