@@ -9,25 +9,25 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Ingredients  extends ArrayAdapter {
+public class List  extends ArrayAdapter {
 
     Activity context;
-    ArrayList<String> ingredients = new ArrayList<>();
-    public Ingredients(Activity context, ArrayList<String> ingredients) {
-        super(context, R.layout.ingredients_list,ingredients);
+    ArrayList<String> itemList;
+    public List(Activity context, ArrayList<String> itemList) {
+        super(context, R.layout.listlayout,itemList);
 
         this.context = context;
-        this.ingredients = ingredients;
+        this.itemList = itemList;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.ingredients_list,null,true);
+        View rowView = inflater.inflate(R.layout.listlayout,null,true);
 
 
-        TextView ingredient = (TextView)rowView.findViewById(R.id.ingredient);
-        ingredient.setText(ingredients.get(position));
+        TextView item = (TextView)rowView.findViewById(R.id.item);
+        item.setText(itemList.get(position));
 
 
 

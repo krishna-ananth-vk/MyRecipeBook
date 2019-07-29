@@ -22,7 +22,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity{
     private static final String TAG = "recipe" ;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private ArrayList<String> id = new ArrayList<>();
