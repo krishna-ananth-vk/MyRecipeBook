@@ -7,4 +7,5 @@
     <color name="textColor">#454545</color>
     <color name="black">#000</color>
     <color name="iron">#CCCCCC</color>
+    <color name="link">#3399ff</color>
 </resources>

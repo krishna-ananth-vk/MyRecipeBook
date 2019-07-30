@@ -5,4 +5,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="hot">Hot.. &#128293;</string>
+    <string name="forgotPassword"><u>Forgot Password..?</u></string>
+    <string name="create_account"><u>Create Account</u></string>
+    <string name="login_here"><u>Login here</u></string>
 </resources>

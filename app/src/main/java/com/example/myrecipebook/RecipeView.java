@@ -93,7 +93,7 @@ public class RecipeView extends Activity {
 
 
     }
-    public  void  createList(ListView listView,ArrayList<String> list){
+    public  void  createList(NoScrollListView listView,ArrayList<String> list){
         List adapter = new List(this,list);
         listView.setAdapter(adapter);
 

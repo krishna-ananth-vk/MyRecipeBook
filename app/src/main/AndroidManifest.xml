@@ -28,6 +28,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RecipeView"></activity>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".Signup"></activity>
+        <activity android:name=".Passwordreset"></activity>
     </application>
 
 </manifest>
