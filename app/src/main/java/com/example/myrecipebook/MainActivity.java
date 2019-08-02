@@ -4,11 +4,14 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+//import android.widget.Toolbar;
+import  androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,13 +34,20 @@ public class MainActivity extends AppCompatActivity{
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private ArrayList<String> id = new ArrayList<>();
     private ArrayList<String> name = new ArrayList<>();
-    NoScrollListView listView;
+    private ArrayList<String> chef = new ArrayList<>();
+    private ArrayList<String> time = new ArrayList<>();
+    ListView listView;
     Button logout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+//        Toolbar toolbar =  findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+
 
         listView = findViewById(R.id.listView);
         logout = findViewById(R.id.logout);
@@ -46,6 +58,14 @@ public class MainActivity extends AppCompatActivity{
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(MainActivity.this, Login.class)); //Go back to home page
                 finish();
+            }
+        });
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,CreateRecipe.class));
             }
         });
 
@@ -81,6 +101,12 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     void createList(){

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,7 +28,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 
 
-public class RecipeView extends Activity {
+public class RecipeView extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String id,title,chef,time;
     String TAG = "---------------------";

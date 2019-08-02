@@ -22,7 +22,7 @@ public class ItemData extends ArrayAdapter {
     private ArrayList<String> id= new ArrayList<String>();
 
     public ItemData(Activity context, ArrayList<String> names, ArrayList<String> id) {
-        super(context, R.layout.list_layout,names);
+        super(context, R.layout.cardlist,names);
 
         this.context = context;
         this.names = names;
@@ -32,7 +32,7 @@ public class ItemData extends ArrayAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater  = context.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.list_layout,null,true);
+        View rowView = inflater.inflate(R.layout.cardlist,null,true);
 
         TextView name = (TextView) rowView.findViewById(R.id.itemName);
 
