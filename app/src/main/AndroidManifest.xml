@@ -36,6 +36,9 @@
         <activity android:name=".CreateRecipe"
             android:label="Your Recipe"
             ></activity>
+
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".EditProfile"></activity>
     </application>
 
 </manifest>

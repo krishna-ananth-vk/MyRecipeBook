@@ -30,6 +30,8 @@
             android:layout_height="200dp"
             android:src="@drawable/hat" />
 
+
+
         <EditText
             android:id="@+id/email"
             android:layout_width="300dp"

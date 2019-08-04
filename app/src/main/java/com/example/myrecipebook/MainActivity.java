@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -109,6 +110,20 @@ public class MainActivity extends AppCompatActivity{
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.profile:
+                showProfile();
+                return true;
+            //case R.id.miProfile:
+            //    showProfileView();
+            //    return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     void createList(){
         ItemData adapter = new ItemData(this,name,id);
         listView.setAdapter(adapter);
@@ -123,5 +138,8 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+    }
+    void showProfile(){
+        startActivity(new Intent(MainActivity.this,Profile.class));
     }
 }
